@@ -1,0 +1,70 @@
+import tkinter as tk
+
+root = tk.Tk()
+
+root.geometry("800x500")
+root.title("Final Project")
+
+
+welcome_label = tk.Label(root, text="WELCOME TO", font=('Arial', 18))
+welcome_label.pack(pady=10)
+
+label = tk.Label(root, text=" SIGN LANGUAGE RECOGNITION SYSTEM FOR SPECIAL EDUCATION STUDENTS", font=('Arial', 15))
+welcome_label.pack(pady=10)
+label.pack()
+
+label1 = tk.Label(root, text="SPECIAL EDUCATION STUDENTS", font=('Arial', 15))
+label1.pack(pady=10)
+
+
+# Create a button
+button = tk.Button(root, text="Start", font=('Arial', 15))
+button.pack(pady=10) 
+
+
+root.mainloop()
+
+
+NEW////
+from tkinter import *
+
+# Initialize the root window
+root = Tk()
+root.minsize(height=700, width=1000)
+
+def tab1():
+    # Clear existing widgets
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    # Page 1 content with text split into two lines
+    label1 = Label(root, text='WELCOME TO SIGN LANGUAGE RECOGNITION SYSTEM\nFOR SPECIAL EDUCATION STUDENTS',
+                   font=('Times New Roman', 23), justify='center')
+    label1.pack(pady=150)  # Center vertically with padding
+
+    # Button to navigate to Page 2
+    button1 = Button(root, text='START', font=('Times New Roman', 23), command=tab2)
+    button1.pack(pady=20) 
+
+def tab2():
+    # Clear existing widgets
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    # Page 2 content
+    label1 = Label(root, text='GOOD DAY STUDENTS WELCOME TO \nSIGN LANGUAGE RECOGNITION SYSTEM',
+                   font=('Times New Roman', 23), justify='center')
+    label1.pack(pady=150)  # Center vertically with padding
+    # Button to navigate back to Page 1
+    button2 = Button(root, text='BACK', font=('Times New Roman', 25), command=tab1)
+    button2.pack(side=BOTTOM)
+
+# Start with the first page
+tab1()
+
+# Run the Tkinter main loop
+root.mainloop()
+
+
+
+
